@@ -5,11 +5,11 @@
 class Treblle < Formula
   desc ""
   homepage "https://github.com/Treblle/treblle-cli"
-  version "0.1.9"
+  version "1.0.0"
 
   on_macos do
-    url "https://github.com/Treblle/treblle-cli/releases/download/0.1.9/treblle-cli_Darwin_all.tar.gz"
-    sha256 "a889de5b3f15d184125eab01a24115d8af2c86bdbae3a2e69cff3e02f38ba6b9"
+    url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.0/treblle-cli_Darwin_all.tar.gz"
+    sha256 "c2c594cb27287c9fe69296a67cafbb048bfbc4c7ae4186b9a0cec005240a99d3"
 
     def install
       bin.install "treblle-cli"
@@ -18,16 +18,16 @@ class Treblle < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Treblle/treblle-cli/releases/download/0.1.9/treblle-cli_Linux_arm64.tar.gz"
-      sha256 "449587abf2198af8b77c594ef46a6ee23260e3229779869a883561d4b29f71e9"
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.0/treblle-cli_Linux_arm64.tar.gz"
+      sha256 "8fa319f52db83740960841f5e91fffccdabe616250606b05525054b5ea75606c"
 
       def install
         bin.install "treblle"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/Treblle/treblle-cli/releases/download/0.1.9/treblle-cli_Linux_x86_64.tar.gz"
-      sha256 "7df337d29d5e089f1d471ef2ce8c52f6ddeb0df78f8d49ca7dc1571d5f1078b2"
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.0/treblle-cli_Linux_x86_64.tar.gz"
+      sha256 "6c6f91dbd976ac5c0c7f73e6bfb6dd276c5aa65faace973d8e14ce051b2d20d0"
 
       def install
         bin.install "treblle"
