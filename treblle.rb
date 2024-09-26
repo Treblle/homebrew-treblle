@@ -5,32 +5,46 @@
 class Treblle < Formula
   desc ""
   homepage "https://github.com/Treblle/treblle-cli"
-  version "1.0.4"
+  version "1.0.77"
 
   on_macos do
-    url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.4/treblle-cli_Darwin_all.tar.gz"
-    sha256 "c765bd8820635c979438e4164b303ab1999ac34f9e13e04263d45c87c9cca190"
-
-    def install
-      bin.install "treblle-cli"
-    end
-  end
-
-  on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.4/treblle-cli_Linux_x86_64.tar.gz"
-      sha256 "eb39ef691fc3ef88a3b94ea952ed0056d5d7743d7938e931d26acdcd81ccbf85"
+    on_intel do
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.77/treblle-cli_1.0.77_darwin_amd64.tar.gz"
+      sha256 "b2be3c535d50d80df9729c09b60cbee8670a9d4df0a08f7bc9787e23c31c6562"
 
       def install
         bin.install "treblle"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.4/treblle-cli_Linux_arm64.tar.gz"
-      sha256 "05a2d8948817383ee65ff7ce551881960cb9cd04236533006c6c1e978a849352"
+    on_arm do
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.77/treblle-cli_1.0.77_darwin_arm64.tar.gz"
+      sha256 "7457c9df67748a09d7af47e7d5968f7a5a485bf4a0766d65cb3ea15d1e5c4fb9"
 
       def install
         bin.install "treblle"
+      end
+    end
+  end
+
+  on_linux do
+    on_intel do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.77/treblle-cli_1.0.77_linux_amd64.tar.gz"
+        sha256 "c90e433c7e0903df7e87201fe474f559887cb73063e3a5281f38a0994cda2009"
+
+        def install
+          bin.install "treblle"
+        end
+      end
+    end
+    on_arm do
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.77/treblle-cli_1.0.77_linux_arm64.tar.gz"
+        sha256 "ee8ea0fc7300d69a8c9f25474f0c78ca784c84a067de9ddb886becf039fb540a"
+
+        def install
+          bin.install "treblle"
+        end
       end
     end
   end
