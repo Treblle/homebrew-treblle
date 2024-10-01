@@ -5,20 +5,20 @@
 class Treblle < Formula
   desc ""
   homepage "https://github.com/Treblle/treblle-cli"
-  version "1.0.79"
+  version "1.0.78"
 
   on_macos do
     on_intel do
-      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.79/treblle-cli_1.0.79_darwin_amd64.tar.gz"
-      sha256 "0c7e932714f065b7b0f63d67a3f803ffe0b26733a11101c49e868382050dfb8d"
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.78/treblle-cli_1.0.78_darwin_amd64.tar.gz"
+      sha256 "9ba44b9ef696b6dc93cc59a495a38e97d047a4d7f39954db3adce0ec4efa9726"
 
       def install
         bin.install "treblle"
       end
     end
     on_arm do
-      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.79/treblle-cli_1.0.79_darwin_arm64.tar.gz"
-      sha256 "523ad355e757f075d39406b4b3c6abe0bafd27d3dafd8b7fd9bfecebdc5108b0"
+      url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.78/treblle-cli_1.0.78_darwin_arm64.tar.gz"
+      sha256 "535575917acb39be4a57f4ca948ddc4b87f8cbea1e80b00637defeb930c1f523"
 
       def install
         bin.install "treblle"
@@ -29,8 +29,8 @@ class Treblle < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.79/treblle-cli_1.0.79_linux_amd64.tar.gz"
-        sha256 "f7c5282d83a59ced38b0071e6d605e920277ee6e64871341d6b1b053a797ce1a"
+        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.78/treblle-cli_1.0.78_linux_amd64.tar.gz"
+        sha256 "64744cbe7f0688b6abd88331f9e2753e312f12597ff44c96b2f060c935ed8a0e"
 
         def install
           bin.install "treblle"
@@ -39,8 +39,8 @@ class Treblle < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.79/treblle-cli_1.0.79_linux_arm64.tar.gz"
-        sha256 "06ffbb8f6753b12b1400d4471e298deb9acfefe807fe4f47949c3e9f55d52d2c"
+        url "https://github.com/Treblle/treblle-cli/releases/download/v1.0.78/treblle-cli_1.0.78_linux_arm64.tar.gz"
+        sha256 "72b56b04533979d1a0656451938cc1928c1f4a6def85a099d2ec966a45eb6f9e"
 
         def install
           bin.install "treblle"
